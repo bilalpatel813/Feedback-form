@@ -34,8 +34,7 @@ def submit():
     try:
         cursor.execute(sql, values)
         dB.commit()
-        message = f("feedback submitted successfully!!.Thank you.")
-        return render_template("form.html",message=message)
+        return render_template("form.html")
     except Exception as e:
         dB.rollback()
         return f"<h2>Error: {e}</h2>"
