@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <title>admin login</title>
+   <link rel="stylesheet"
+     href="{{url_for('static', filename='login.css')}}" type ="text/css"/>
+  </head>
+  <body>
+    <div class="box">
+     <h2>
+       Admin login
+</h2>
+<div class ="container">
+    <form method="post" action='/login'>
+    <label for="username">username:
+    </label><br>
+    <input type="text" id="username"
+    required name ='username'><br>
+    <label for="password" >password:
+    </label><br>
+    <input type="password" id="password" required name ='password'><br>
+     <button type="submit" class="login">login</button>
+    </form>
+    </div>
+    </div>
+<script src="{{url_for ('static', filename='login.js')}}>
+  </body>
+</html>
+ 
+
