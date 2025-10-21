@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
- <title>admin login</title>
+  {% extends "base.html" %}
+ <title>{ % block tittle %}admin login {% endblock%}</title>
+ {% block head %}
    <link rel="stylesheet"
      href="{{url_for('static', filename='login.css')}}" type ="text/css"/>
+     {% endblock %}
   </head>
   <body>
+  {% block content %} 
     <div class="box">
      <h2>
        Admin login
@@ -23,7 +27,8 @@
     </form>
     </div>
     </div>
-<script src="{{url_for ('static', filename='login.js')}}>
+    {% endblock %}
+<script src="{{url_for ('static', filename='login.js')}}"> </script> 
   </body>
 </html>
  

@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+{% extends "base.html" %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>
+  {% block title %} Feedback form{% endblock%} </title>
+  {% block head %}
   <link href="{{ url_for('static', filename='form.css') }}" rel="stylesheet" type="text/css" />
+  {% endblock %}
 </head>
 <body>
+{% block content %}
     <h1>Feedback form</h1>
      <h3> we would love to know your thoughts! </h3>
      <div class="box">
@@ -38,10 +42,8 @@
    
 </div>
 </div>
-  {%  if message  %}
+{% endblock %}
   <script>
-  alert("{{ mesaage }}");
   </script>
-   {%  endif  %}
 </body>
 </html>

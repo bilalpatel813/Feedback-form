@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+{% extends "base.html" %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>feedbacks</title>
+  <title> 
+ {% block title %} feedbacks data {% endblock %}</title>
+ {% block head %}
   <link href="{{ url_for('static', filename='admin.css') }}" rel="stylesheet" type="text/css" />
+  {% endblock %}
 </head>
 <body>
+{% block content %}
 <div class ="content">
 <h2>SAVED  FEEDBACKS</h2>
 <h3>(admin only) </h3>
@@ -34,6 +38,7 @@
   </table>
   </div>
  <button class="logout"> <a href="/logout">Logout</a></button></div>
+ {% endblock %} 
   <script src="{{url_for('static', filename="user.js") }}"></script>
 </body>
 </html>
