@@ -9,7 +9,9 @@ body{
   background-color: #E0D9D9 ;
   border-radius : 30px;
   height: 375px ;
-  width: 601px;
+  width: 90%;
+  max-width:500px;
+  margin:auto;
   display: flex;
   Justify-content: center ;
   padding-top: 40px;
@@ -33,8 +35,14 @@ h3{
   color : white;
   border-radius : 7px;
 }
-@media (max-width:1366){
-  .container{
-    width: %;
+@media (min-width:200px) and (max-width:600px) {
+ body {
+ width:100%;
+ font-size:16px;
+ background-color: grey;
+ }
+ .container{
+    width: 100%;
+    font-size: 16px;
   }
 }
